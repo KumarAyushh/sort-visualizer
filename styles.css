@@ -1,0 +1,163 @@
+/* Theme Variables */
+:root[data-theme="light"] {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --card-bg: white;
+    --primary-color: #4CAF50;
+    --primary-hover: #45a049;
+    --primary-active: #2E7D32;
+    --bar-color: #4CAF50;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+:root[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+    --primary-color: #66bb6a;
+    --primary-hover: #81c784;
+    --primary-active: #4caf50;
+    --bar-color: #66bb6a;
+    --shadow-color: rgba(0,0,0,0.3);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.theme-btn {
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+
+.theme-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+[data-theme="light"] .dark-icon,
+[data-theme="dark"] .light-icon {
+    display: none;
+}
+
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.execution-controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.control-btn {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.algo-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.algo-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.algo-btn.active {
+    background-color: var(--primary-active);
+}
+
+.visualization {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    margin-bottom: 20px;
+}
+
+.array-container {
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    gap: 2px;
+}
+
+.array-bar {
+    background-color: var(--bar-color);
+    flex: 1;
+    transition: height 0.3s ease;
+}
+
+.explanation {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.controls-secondary {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="range"] {
+    width: 200px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}

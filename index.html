@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sorting Algorithm Visualizer</h1>
+            <div class="theme-controls">
+                <button id="themeToggle" class="theme-btn">
+                    <span class="light-icon">☀️</span>
+                    <span class="dark-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="controls-secondary">
+            <button onclick="generateNewArray()">Generate New Array</button>
+            <label>
+                Array Size:
+                <input type="range" id="arraySizeSlider" min="10" max="100" value="50">
+            </label>
+            <label>
+                Speed:
+                <input type="range" id="speedSlider" min="1" max="100" value="50" onchange="updateSpeed(this.value)">
+            </label>
+        </div>
+
+        <div class="execution-controls">
+            <button id="pauseBtn" class="control-btn" disabled>Pause</button>
+            <button id="resumeBtn" class="control-btn" disabled>Resume</button>
+            <button id="stopBtn" class="control-btn" disabled>Stop</button>
+        </div>
+
+        <div class="controls">
+            <button class="algo-btn" data-algo="bubbleSort">Bubble Sort</button>
+            <button class="algo-btn" data-algo="insertionSort">Insertion Sort</button>
+            <button class="algo-btn" data-algo="selectionSort">Selection Sort</button>
+            <button class="algo-btn" data-algo="mergeSort">Merge Sort</button>
+            <button class="algo-btn" data-algo="quickSort">Quick Sort</button>
+        </div>
+
+        <div class="visualization">
+            <div class="array-container" id="array-container"></div>
+        </div>
+
+        <div class="explanation" id="explanation"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
